@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray"
+    android:padding="32dp">
+
+
+    <TextView
+        android:id="@+id/tv_speaker_detail_report_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:text="@string/mobile_consultant" />
+
+    <TextView
+        android:id="@+id/tv_speaker_detail_report_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_speaker_detail_report_name"
+        android:layout_alignStart="@+id/tv_speaker_detail_report_name"
+        android:layout_marginTop="8dp"
+        android:text="@string/digital_nomad_russia" />
+
+    <include
+        android:id="@+id/tag_speaker_detail"
+        layout="@layout/view_report_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_speaker_detail_report_place"
+        android:layout_alignStart="@+id/tv_speaker_detail_report_place"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_speaker_detail_report_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tag_speaker_detail"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:text="@string/time" />
+
+    <TextView
+        android:id="@+id/tv_speaker_detail_report_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_speaker_detail_report_time"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toEndOf="@+id/tv_speaker_detail_report_time"
+        android:textColor="@color/text_detail_speaker"
+        android:text="@string/date" />
+
+
+</RelativeLayout>

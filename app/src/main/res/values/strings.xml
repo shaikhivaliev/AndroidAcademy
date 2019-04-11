@@ -5,4 +5,10 @@
     <string name="speaker_artur_vasilov">Артур Василов</string>
     <string name="report_text_how_we_speed_yandex">Многие Android-разработчики знают стандартные методы профилирования приложений, инструменты для отладки и улучшения производительности. Однако для случая больших приложений этого не всегда достаточно. Мы поговорим о нестандартных способах ускорения работы приложения, затронем самые разные аспекты, как вопросы UI, так и инструментов и околосерверных вещей. Я надеюсь, что этот доклад заставит вас посмотреть на вопросы производительности по-новому и подумать о том, что вы можете сделать в своем приложении.Я надеюсь, что этот доклад заставит вас посмотреть на вопросы производительности по-новому и подумать о том, что вы можете сделать в своем приложении.</string>
     <string name="all_report">все доклады</string>
+    <string name="sergey_ryabov">Sergey \nRyabov</string>
+    <string name="sergey_ryabov_description">Currently Sergey is an independent Android Engineer and Consultant with the background in backend dev. Co-organiser of the first Korlin User Group in Russia and Android Academy in St. Petersburg and Moscow. Currently Sergey is an independent Android Engineer and Consultant with the background in backend dev. Co-organiser of the first Korlin User Group in Russia and Android Academy in St. Petersburg and Moscow.</string>
+    <string name="digital_nomad_russia">Digital Nomad, Russia</string>
+    <string name="mobile_consultant">Mobile Consultant</string>
+    <string name="time">11 : 15</string>
+    <string name="date">27 November</string>
 </resources>
