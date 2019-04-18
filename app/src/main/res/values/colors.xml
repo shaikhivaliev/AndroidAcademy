@@ -3,6 +3,6 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="text_report_label">#626262</color>
+    <color name="text_event_label">#C4C0C0</color>
     <color name="text_detail_speaker">#923aff</color>
 </resources>
