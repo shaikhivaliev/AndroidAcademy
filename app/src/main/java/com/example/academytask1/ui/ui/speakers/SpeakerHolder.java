@@ -35,7 +35,6 @@ public class SpeakerHolder extends RecyclerView.ViewHolder {
 
     public void bind(final Speaker speaker, final OnItemClickListener listener) {
 
-        Log.d("PHOTO", "bind: " + speaker.getPhotoUrl() );
         Picasso.get()
                 .load(Uri.parse(speaker.getPhotoUrl()))
                 .error(R.drawable.ic_launcher_background)

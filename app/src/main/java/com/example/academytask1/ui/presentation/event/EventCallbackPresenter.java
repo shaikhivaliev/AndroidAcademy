@@ -1,5 +1,8 @@
 package com.example.academytask1.ui.presentation.event;
 
+import android.widget.Toast;
+
+import com.example.academytask1.ui.AppDelegate;
 import com.example.academytask1.ui.entity.Event;
 import com.example.academytask1.ui.model.LocalCallback;
 import com.example.academytask1.ui.model.LocalData;
@@ -14,7 +17,7 @@ public class EventCallbackPresenter implements LocalCallback.EventCallback {
         mLocalData.setCallbackEvent(this);
     }
 
-    public void onGetEvent(int eventId) {
+    public void onGetEvent(String eventId) {
         mLocalData.getEvent(eventId);
     }
 

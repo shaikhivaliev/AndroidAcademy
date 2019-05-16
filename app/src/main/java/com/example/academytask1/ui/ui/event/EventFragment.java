@@ -18,7 +18,7 @@ public class EventFragment extends DialogFragment implements EventView {
 
     public static final String EVENTID = "EVENTID";
 
-    private int mEventId;
+    private String mEventId;
     private TextView mEventTitle;
     private TextView mEventTrack;
     private TextView mEventSpeaker;
@@ -39,7 +39,7 @@ public class EventFragment extends DialogFragment implements EventView {
         super.onCreate(savedInstanceState);
 
         if (getArguments() != null) {
-            mEventId = getArguments().getInt(EVENTID);
+            mEventId = getArguments().getString(EVENTID);
         }
     }
 
