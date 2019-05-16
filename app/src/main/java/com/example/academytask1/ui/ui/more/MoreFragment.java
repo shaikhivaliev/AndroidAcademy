@@ -1,4 +1,4 @@
-package com.example.academytask1.ui.ui.devfest;
+package com.example.academytask1.ui.ui.more;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,11 +10,12 @@ import android.view.ViewGroup;
 
 import com.example.academytask1.R;
 
-public class FragmentDevFest extends Fragment {
+public class MoreFragment extends Fragment {
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_dev_fest, container, false);
+        return inflater.inflate(R.layout.fragment_more, container, false);
     }
 }

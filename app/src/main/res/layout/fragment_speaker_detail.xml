@@ -28,6 +28,7 @@
                 app:cardCornerRadius="60dp">
 
                 <ImageView
+                    android:id="@+id/iv_speaker_detail_photo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
@@ -54,129 +55,75 @@
         </FrameLayout>
 
         <TextView
-            android:id="@+id/tv_speaker_detail_name"
+            android:id="@+id/tv_speaker_detail_first_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_toEndOf="@+id/cv_avatar"
-            android:lines="2"
             android:textAllCaps="true"
-            tools:text="Name name"/>
+            tools:text="First name" />
 
         <TextView
-            android:id="@+id/tv_speaker_detail_short_description"
+            android:id="@+id/tv_speaker_detail_second_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_speaker_detail_name"
-            android:layout_alignStart="@+id/tv_speaker_detail_name"
+            android:layout_below="@+id/tv_speaker_detail_first_name"
+            android:layout_alignStart="@+id/tv_speaker_detail_first_name"
+            android:textAllCaps="true"
+            tools:text="Second name" />
+
+
+        <TextView
+            android:id="@+id/tv_speaker_detail_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_speaker_detail_second_name"
+            android:layout_alignStart="@+id/tv_speaker_detail_first_name"
             android:layout_marginTop="4dp"
             android:textColor="@color/text_detail_speaker"
-            tools:text="Name name"/>
+            tools:text="job" />
 
         <TextView
-            android:id="@+id/tv_speaker_detail_origin"
+            android:id="@+id/tv_speaker_detail_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_speaker_detail_short_description"
-            android:layout_alignStart="@+id/tv_speaker_detail_short_description"
-            tools:text="Origin"/>
+            android:layout_below="@id/tv_speaker_detail_job"
+            android:layout_alignStart="@+id/tv_speaker_detail_job"
+            tools:text="location" />
 
         <ImageView
-            android:id="@+id/iv_connect_with_telegram"
+            android:id="@+id/iv_connect_with_github"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_below="@id/tv_speaker_detail_origin"
-            android:layout_alignStart="@+id/tv_speaker_detail_origin"
+            android:layout_below="@id/tv_speaker_detail_location"
+            android:layout_alignStart="@+id/tv_speaker_detail_location"
             android:layout_marginTop="8dp"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/ic_github"
             tools:ignore="contentDescription" />
 
         <ImageView
             android:id="@+id/iv_connect_with_twitter"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_below="@id/tv_speaker_detail_origin"
-            android:layout_alignTop="@+id/iv_connect_with_telegram"
+            android:layout_below="@id/tv_speaker_detail_location"
+            android:layout_alignTop="@+id/iv_connect_with_github"
             android:layout_marginStart="8dp"
-            android:layout_toEndOf="@+id/iv_connect_with_telegram"
-            android:src="@mipmap/ic_launcher"
+            android:layout_toEndOf="@+id/iv_connect_with_github"
+            android:src="@drawable/ic_twitter"
             tools:ignore="contentDescription" />
 
         <TextView
-            android:id="@+id/tv_speaker_detail_full_description"
+            android:id="@+id/tv_speaker_detail_about"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/iv_connect_with_telegram"
+            android:layout_below="@+id/iv_connect_with_github"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="16dp"
-            tools:text="@tools:sample/lorem"/>
+            tools:text="@tools:sample/lorem" />
 
-        <ImageView
-            android:id="@+id/iv_speaker_detail_background"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_below="@+id/tv_speaker_detail_full_description"
-            android:background="@color/text_event_label" />
-
-        <TextView
-            android:id="@+id/tv_speaker_detail_event_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_speaker_detail_full_description"
-            android:layout_alignStart="@+id/tv_speaker_detail_full_description"
-            android:layout_marginTop="8dp"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            tools:text="Event name" />
-
-        <TextView
-            android:id="@+id/tv_speaker_detail_event_place"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_speaker_detail_event_name"
-            android:layout_alignStart="@+id/tv_speaker_detail_event_name"
-            tools:text="Event place" />
-
-        <include
-            android:id="@+id/speaker_detail_tag"
-            layout="@layout/view_report_tag"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_speaker_detail_event_place"
-            android:layout_alignStart="@+id/tv_speaker_detail_event_place"
-            android:layout_marginTop="4dp" />
-
-        <TextView
-            android:id="@+id/tv_speaker_detail_event_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/speaker_detail_tag"
-            android:layout_alignStart="@+id/speaker_detail_tag"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            tools:text="Time" />
-
-        <TextView
-            android:id="@+id/tv_speaker_detail_event_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/speaker_detail_tag"
-            android:layout_alignBaseline="@+id/tv_speaker_detail_event_time"
-            android:layout_toEndOf="@+id/speaker_detail_tag"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-            android:textColor="@color/text_detail_speaker"
-            tools:text="Date" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab_speaker_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/iv_speaker_detail_background"
-            android:layout_alignBottom="@+id/iv_speaker_detail_background"
-            android:layout_margin="8dp"
-            android:src="@drawable/ic_close"
-            app:backgroundTint="@android:color/white" />
 
     </RelativeLayout>
 

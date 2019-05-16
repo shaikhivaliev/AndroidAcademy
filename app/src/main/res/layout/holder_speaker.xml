@@ -12,51 +12,65 @@
         android:id="@+id/speaker_avatar"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        app:cardCornerRadius="30dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp">
+        app:cardCornerRadius="30dp">
 
         <ImageView
+            android:id="@+id/iv_speaker_photo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background"
             tools:ignore="contentDescription" />
+
     </android.support.v7.widget.CardView>
 
     <TextView
-        android:id="@+id/tv_speaker_name"
+        android:id="@+id/tv_speaker_first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_speaker_job_title"
+        android:layout_alignStart="@+id/tv_speaker_job_title"
+        android:layout_alignTop="@+id/speaker_avatar"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_above="@+id/tv_speaker_description"
-        android:layout_alignStart="@+id/tv_speaker_description"
         android:textStyle="bold"
-        tools:text="Name" />
+        tools:text="First Name" />
 
     <TextView
-        android:id="@+id/tv_speaker_description"
+        android:id="@+id/tv_speaker_second_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tv_speaker_origin"
-        android:layout_alignStart="@+id/tv_speaker_origin"
+        android:layout_alignTop="@+id/speaker_avatar"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/tv_speaker_first_name"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        tools:text="Second Name" />
+
+
+    <TextView
+        android:id="@+id/tv_speaker_job_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_speaker_location"
+        android:layout_alignStart="@+id/tv_speaker_location"
         android:textColor="@color/text_detail_speaker"
-        tools:text="Description" />
+        tools:text="Job title" />
 
     <TextView
-        android:id="@+id/tv_speaker_origin"
+        android:id="@+id/tv_speaker_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/speaker_avatar"
-        android:layout_marginStart="16dp"
         android:layout_alignBottom="@+id/speaker_avatar"
-        tools:text="Origin" />
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/speaker_avatar"
+        tools:text="location" />
 
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@+id/tv_speaker_origin"
+        android:layout_below="@+id/tv_speaker_location"
         android:layout_marginTop="8dp"
         android:background="@color/colorPrimary" />
 

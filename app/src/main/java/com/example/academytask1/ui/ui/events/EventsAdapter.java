@@ -1,4 +1,4 @@
-package com.example.academytask1.ui.ui.event;
+package com.example.academytask1.ui.ui.events;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -7,13 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.academytask1.R;
-import com.example.academytask1.ui.model.Event;
-import com.example.academytask1.ui.ui.OnItemClickListener;
+import com.example.academytask1.ui.OnItemClickListener;
+import com.example.academytask1.ui.entity.Event;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerAdapterEvent extends RecyclerView.Adapter<HolderEvent> {
+public class EventsAdapter extends RecyclerView.Adapter<EventHolder> {
 
     private List<Event> mData = new ArrayList<>();
     private OnItemClickListener mListener;
@@ -28,14 +28,14 @@ public class RecyclerAdapterEvent extends RecyclerView.Adapter<HolderEvent> {
 
     @NonNull
     @Override
-    public HolderEvent onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public EventHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
         View v = layoutInflater.inflate(R.layout.holder_event, viewGroup, false);
-        return new HolderEvent(v);
+        return new EventHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HolderEvent holder, int position) {
+    public void onBindViewHolder(@NonNull EventHolder holder, int position) {
 
         Event event = mData.get(position);
         holder.bind(event, mListener);

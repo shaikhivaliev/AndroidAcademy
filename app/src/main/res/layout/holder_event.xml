@@ -9,8 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         tools:text="Time" />
 
@@ -19,19 +19,29 @@
         android:id="@+id/tv_event_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/tv_event_time"
+        android:layout_alignTop="@id/tv_event_time"
         android:layout_marginStart="16dp"
         android:layout_toEndOf="@+id/tv_event_time"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         tools:text="Event name" />
 
     <TextView
-        android:id="@+id/tv_event_place"
+        android:id="@+id/tv_event_place_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_event_name"
         android:layout_alignStart="@+id/tv_event_name"
         android:layout_marginTop="8dp"
+        android:text="@string/room" />
+
+    <TextView
+        android:id="@+id/tv_event_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_event_place_text"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/tv_event_place_text"
         tools:text="Event place" />
 
     <include
@@ -39,8 +49,8 @@
         layout="@layout/view_report_tag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_event_place"
-        android:layout_alignStart="@+id/tv_event_place"
+        android:layout_below="@+id/tv_event_place_text"
+        android:layout_alignStart="@+id/tv_event_place_text"
         android:layout_marginTop="8dp" />
 
     <TextView
@@ -52,21 +62,10 @@
         android:layout_marginTop="8dp"
         tools:text="Speaker" />
 
-    <TextView
-        android:id="@+id/tv_event_speaker_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tag_event"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_toEndOf="@id/tv_event_speaker"
-        android:textColor="@color/text_detail_speaker"
-        tools:text="Speaker Description" />
-
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@+id/tv_event_speaker_description"
+        android:layout_below="@+id/tv_event_speaker"
         android:layout_marginTop="4dp"
         android:background="@color/colorPrimary" />
 

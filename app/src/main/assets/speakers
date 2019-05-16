@@ -1,0 +1,172 @@
+[
+  {
+    "id": "alex-efremenkov",
+    "firstName": "Александр",
+    "lastName": "Ефременков",
+    "location": "Москва, Россия",
+    "jobTitle": "System Android developer",
+    "company": "Яндекс.Такси",
+    "about": "Пишу код, смотрю в Android.",
+    "photo": "https://devfest-spb.com/img/speakers/AlexanderEfremenkov.jpg",
+    "flagImage": "ru",
+    "links": {
+      "twitter": "https://twitter.com/iamironz"
+    }
+  },
+  {
+    "id": "tanay-pant",
+    "firstName": "Tanay",
+    "lastName": "Pant",
+    "location": "Берлин, Германия",
+    "jobTitle": "Engineering Communications Manager",
+    "company": "Research Gate",
+    "about": "Tanay Pant is an author, hacker, developer and tech enthusiast. He is best known for his work on “Learning Web-based Virtual Reality” by Apress, “Building a Virtual Assistant for Raspberry Pi” by Apress and “Learning Firefox OS Application Development” published by Packt. He is also an official representative of Mozilla. He has been listed in the about:credits of the Firefox web browser for his contributions to the different open source projects of the Mozilla Foundation. He also writes for a number of websites like SitePoint and Tuts+ where he shares tips and tricks about web development.",
+    "photo": "https://devfest-spb.com/img/speakers/TanayPant.jpg",
+    "flagImage": "de",
+    "links": {
+      "twitter": "https://twitter.com/tanay1337"
+    }
+  },
+  {
+    "id": "konstantin-tskhovrebov",
+    "firstName": "Константин",
+    "lastName": "Цховребов",
+    "location": "Санкт-Петербург, Россия",
+    "jobTitle": "Senior Developer",
+    "company": "Redmadrobot",
+    "about": "Graduated from SPBGPU, Konstantin used to be fond of microcontrollers and circuitry. He has started coding for android platform since 2.2 version had been released. Today, Kostya is an architect in the St. Petersburg team Redmadrobot",
+    "photo": "https://devfest-spb.com/img/speakers/KonstantinTskhovrebov.jpg",
+    "flagImage": "ru",
+    "links": {
+      "github": "https://github.com/terrakok"
+    }
+  },
+  {
+    "id": "shurik-babaev",
+    "firstName": "Александр",
+    "lastName": "Бабаев",
+    "location": "Санкт-Петербург, Россия",
+    "jobTitle": "CTO",
+    "company": "Redmadrobot SPb",
+    "about": "Java, Objective-C, Swift",
+    "photo": "https://devfest-spb.com/img/speakers/AlexBabaev.jpg",
+    "flagImage": "ru",
+    "links": {
+      "": ""
+    }
+  },
+  {
+    "id": "ruslan-kalabaev",
+    "firstName": "Руслан",
+    "lastName": "Калабаев",
+    "location": "Санкт-Петербург, Россия",
+    "jobTitle": "Android-разработчик",
+    "company": "Redmadrobot",
+    "about": "Разрабатываю под Android чуть больше 4-х лет. Исследую и решаю сложные технические задачи. Закончил Томский государственный университет, факультет информатики. Адепт кафедры программной инженерии.",
+    "photo": "https://devfest-spb.com/img/speakers/RuslanKalabaev.jpg",
+    "flagImage": "ru",
+    "links": {
+      "": ""
+    }
+  },
+  {
+    "id": "artur-vasilov",
+    "firstName": "Артур",
+    "lastName": "Василов",
+    "location": "Санкт-Петербург, Россия",
+    "jobTitle": "Старший Android-разработчик",
+    "company": "Яндекс",
+    "about": "Android Developer with over five years of professional experience and love of creating extremely high-quality apps with perfect UI / UX and optimizations. Working at Yandex. GDG Leader.",
+    "photo": "https://devfest-spb.com/img/speakers/ArturVasilov.png",
+    "flagImage": "ru",
+    "links": {
+      "twitter": "https://twitter.com/vasilovartur",
+      "github": "https://github.com/ArturVasilov"
+    }
+  },
+  {
+    "id": "evgeny-kot",
+    "firstName": "Евгений",
+    "lastName": "Кот",
+    "location": "Санкт-Петербург, Россия",
+    "jobTitle": "Тимлид",
+    "company": "Wrike",
+    "about": "Начинал с C++ и железяк, потом переключился на .Net и C#. Работал много где, но как-то так получилось, что работая в Dell пришлось заниматься CoffeeScript и фронтендом ¯_(ツ)_/¯. Сейчас работаю во Wrike, высоконагруженном SAAS приложении с очень богатым клиентским кодом, который мы пишем на Dart и Angular. Участник программного комитета HolyJS, спикер. Google Developer Expert.",
+    "photo": "https://devfest-spb.com/img/speakers/EvgenyKot.jpg",
+    "flagImage": "ru",
+    "links": {
+      "twitter": "https://twitter.com/bunopus"
+    }
+  },
+  {
+    "id": "doug-sillars",
+    "firstName": "Doug",
+    "lastName": "Sillars",
+    "location": "США",
+    "jobTitle": "Digital Nomad",
+    "company": "",
+    "about": "Doug is a leading mobile developer advocate and evangelist. He is widely known as an expert in mobile application architecture, especially when it comes to performance. Doug has worked with thounited-states-of-americands of developers around the world, helping them improve the speed, battery life and customer satisfaction of their applications (both native and web). The author of O’Reilly’s ‘High Performance Android Apps,’ he has spoken at conferences around the world on mobile performance. He is currently freelancing,and traveling with his family of 6 (plus the dog!) as a digital nomad in Europe.",
+    "photo": "https://devfest-spb.com/img/speakers/DougSillars.jpg",
+    "flagImage": "us",
+    "links": {
+      "twitter": "https://twitter.com/dougsillars"
+    }
+  },
+  {
+    "id": "dora-militaru",
+    "firstName": "Dora",
+    "lastName": "Militaru",
+    "location": "Лондон, Великобритания",
+    "jobTitle": "Senior developer",
+    "company": "the Financial Times",
+    "about": "Dora is a senior developer at the Financial Times. She has recently led the team responsible for implementing the EU's General Data Protection Regulation (GDPR) on ft.com, and currently works on exciting internal products. She is passionate about all things web performance – and skydiving.",
+    "photo": "https://devfest-spb.com/img/speakers/DoraMilitaru.png",
+    "flagImage": "gb",
+    "links": {
+      "twitter": "https://twitter.com/doramilitaru"
+    }
+  },
+  {
+    "id": "sergey-ryabov",
+    "firstName": "Сергей",
+    "lastName": "Рябов",
+    "location": "Россия",
+    "jobTitle": "Mobile Consultant",
+    "company": "",
+    "about": "Currently Sergey is an independent Android Engineer and Consultant with the background in backend dev. Co-organiser of the first Kotlin User Group in Russia and Android Academy in St. Petersburg and Moscow, usually speaks about Kotlin & Android. Kotlin early adopter, digital nomad.",
+    "photo": "https://devfest-spb.com/img/speakers/SergeyRyabov.jpg",
+    "flagImage": "ru",
+    "links": {
+      "telegram": "https://t.me/colriot"
+    }
+  },
+  {
+    "id": "illya-klymov",
+    "firstName": "Илья",
+    "lastName": "Климов",
+    "location": "Харьков, Украина",
+    "jobTitle": "CEO",
+    "company": "Javascript.Ninja",
+    "about": "14 years of JS everywhere: from microcontrollers to rendering video in the cloud. More than 5 years of educational experience (at two universities and Illya's own courses), Ph.D. in Computer Science (field of interest: System Analysis and Theory of optimal decisions). Coach at Kottans.Org project.",
+    "photo": "https://devfest-spb.com/img/speakers/IllyaKlymov.jpg",
+    "flagImage": "ua",
+    "links": {
+      "twitter": "https://twitter.com/xanf_ua"
+    }
+  },
+  {
+    "id": "eugene-shishkin",
+    "firstName": "Евгений",
+    "lastName": "Шишкин",
+    "location": "Санкт-Петербург, Россия",
+    "jobTitle": "Android Developer",
+    "company": "Aviasales",
+    "about": "Android-разработчик с опытом более 8 лет. Адаптировал телефоны LG под российский рынок, разрабатывал умного ассистента в i-Free и амбициозный аудиогид izi.TRAVEL. В 2016 году присоеденился к команде Aviasales, где разрабатывает приложение Hotellook для поиска лучших цен на отели. Автор популярных android open-source проектов (RobotoTextView, AppMsg, ProgressFragment, Snowfall, MultiBackStack и т.д.)",
+    "photo": "https://devfest-spb.com/img/speakers/EvgenyShishkin.jpg",
+    "flagImage": "ru",
+    "links": {
+      "twitter": "https://github.com/johnkil",
+      "github": "https://github.com/johnkil"
+    }
+  }
+]
