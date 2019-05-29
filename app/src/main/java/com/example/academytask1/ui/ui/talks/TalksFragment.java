@@ -1,4 +1,4 @@
-package com.example.academytask1.ui.ui.events;
+package com.example.academytask1.ui.ui.talks;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,21 +15,21 @@ import android.widget.Toast;
 
 import com.example.academytask1.R;
 import com.example.academytask1.ui.OnItemClickListener;
-import com.example.academytask1.ui.entity.Event;
-import com.example.academytask1.ui.presentation.events.EventsCallbackPresenter;
-import com.example.academytask1.ui.presentation.events.EventsView;
-import com.example.academytask1.ui.ui.event.EventFragment;
+import com.example.academytask1.ui.entity.Talk;
+import com.example.academytask1.ui.presentation.talks.TalksPresenter;
+import com.example.academytask1.ui.presentation.talks.TalksView;
+import com.example.academytask1.ui.ui.talk.TalkFragment;
 
 import java.util.List;
 
-public class EventsFragment extends Fragment implements
+public class TalksFragment extends Fragment implements
         OnItemClickListener,
-        EventsView {
+        TalksView {
 
     private RecyclerView mRecyclerView;
-    private EventsAdapter mAdapter;
+    private TalksAdapter mAdapter;
     private ProgressBar mProgressBar;
-    private EventsCallbackPresenter mPresenter;
+    private TalksPresenter mPresenter;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,30 +52,32 @@ public class EventsFragment extends Fragment implements
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mAdapter = new EventsAdapter();
+        mAdapter = new TalksAdapter();
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mAdapter.setListener(this);
         mRecyclerView.setAdapter(mAdapter);
 
-        mPresenter = new EventsCallbackPresenter(this);
-        mPresenter.onGetEvents();
+        mPresenter = new TalksPresenter(this);
+        mPresenter.onGetTalks();
     }
 
 
     @Override
     public void itemClick(String eventId) {
 
+        //todo заменить на Cicerone
+
         Bundle args = new Bundle();
-        args.putString(EventFragment.EVENTID, eventId);
+        args.putString(TalkFragment.EVENTID, eventId);
 
         FragmentManager fm = getActivity().getSupportFragmentManager();
-        EventFragment eventDetail = EventFragment.newInstance(args);
+        TalkFragment eventDetail = TalkFragment.newInstance(args);
         eventDetail.show(fm, "fragment_event_detail");
     }
 
     @Override
-    public void showEvents(List<Event> events) {
-        mAdapter.addData(events);
+    public void showTalks(List<Talk> talks) {
+        mAdapter.addData(talks);
     }
 
     @Override

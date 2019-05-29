@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.example.academytask1.R;
 import com.example.academytask1.ui.OnItemClickListener;
 import com.example.academytask1.ui.entity.Speaker;
-import com.example.academytask1.ui.presentation.speakers.SpeakersCallbackPresenter;
+import com.example.academytask1.ui.presentation.speakers.SpeakersPresenter;
 import com.example.academytask1.ui.presentation.speakers.SpeakersView;
 import com.example.academytask1.ui.ui.speaker.SpeakerFragment;
 
@@ -30,7 +30,7 @@ public class SpeakersFragment extends Fragment implements
     private SpeakersAdapter mAdapter;
     private ProgressBar mProgressBar;
 
-    private SpeakersCallbackPresenter mPresenter;
+    private SpeakersPresenter mPresenter;
 
     @Nullable
     @Override
@@ -53,7 +53,7 @@ public class SpeakersFragment extends Fragment implements
         mAdapter.setListener(this);
         mRecyclerView.setAdapter(mAdapter);
 
-        mPresenter = new SpeakersCallbackPresenter(this);
+        mPresenter = new SpeakersPresenter(this);
         mPresenter.onGetLocalData();
     }
 
@@ -83,6 +83,8 @@ public class SpeakersFragment extends Fragment implements
     @Override
 
     public void itemClick(String id) {
+
+        //todo заменить на Cicerone
 
         Bundle args = new Bundle();
         args.putString(SpeakerFragment.SPEAKERID, id);

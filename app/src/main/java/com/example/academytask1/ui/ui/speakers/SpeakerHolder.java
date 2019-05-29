@@ -49,7 +49,7 @@ public class SpeakerHolder extends RecyclerView.ViewHolder {
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.itemClick(speaker.getSpeakerId());
+                listener.itemClick(String.valueOf(speaker.getSpeakerId()));
             }
         });
     }

@@ -20,6 +20,7 @@ public class SpeakersAdapter extends RecyclerView.Adapter<SpeakerHolder> {
 
     public void addData(List<Speaker> data) {
         mData.addAll(data);
+        notifyDataSetChanged();
     }
 
     public void setListener(OnItemClickListener listener) {
@@ -36,10 +37,8 @@ public class SpeakersAdapter extends RecyclerView.Adapter<SpeakerHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull SpeakerHolder holder, int position) {
-
         Speaker speaker = mData.get(position);
         holder.bind(speaker, mListener);
-
     }
 
     @Override

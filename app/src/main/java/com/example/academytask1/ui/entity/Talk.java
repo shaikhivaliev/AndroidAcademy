@@ -1,49 +1,42 @@
 package com.example.academytask1.ui.entity;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-public class Event implements Serializable {
+@Entity(tableName = "talks")
+public class Talk implements Serializable {
 
-    @SerializedName("id")
-    private int mEventId;
-
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "title")
     @SerializedName("title")
-    private String mTitle;
+    private String mTitle="";
 
+    @ColumnInfo(name = "description")
     @SerializedName("description")
     private String mDescription;
 
+    @ColumnInfo(name = "room")
     @SerializedName("room")
     private int mRoom;
 
+    @ColumnInfo(name = "track")
     @SerializedName("track")
     private String mTrack;
 
+    @ColumnInfo(name = "speaker")
     @SerializedName("speaker")
     private String mSpeaker;
 
+    @ColumnInfo(name = "time")
     @SerializedName("time")
     private String mTime;
-
-    public Event(int mEventId, String mTitle, String mDescription, int mRoom, String mTrack, String mSpeaker, String mTime) {
-        this.mEventId = mEventId;
-        this.mTitle = mTitle;
-        this.mDescription = mDescription;
-        this.mRoom = mRoom;
-        this.mTrack = mTrack;
-        this.mSpeaker = mSpeaker;
-        this.mTime = mTime;
-    }
-
-    public int getEventId() {
-        return mEventId;
-    }
-
-    public void setEventId(int mEventId) {
-        this.mEventId = mEventId;
-    }
 
     public String getTitle() {
         return mTitle;

@@ -1,53 +1,55 @@
 package com.example.academytask1.ui.entity;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
+
+@Entity(tableName = "speakers")
 public class Speaker implements Serializable {
 
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "id_speaker")
     @SerializedName("id")
-    private String mSpeakerId;
+    private String mSpeakerId = "";
 
+    @ColumnInfo(name = "firstName")
     @SerializedName("firstName")
     private String mFirstName;
 
+    @ColumnInfo(name = "lastName")
     @SerializedName("lastName")
     private String mLastName;
 
+    @ColumnInfo(name = "location")
     @SerializedName("location")
     private String mLocation;
 
+    @ColumnInfo(name = "jobTitle")
     @SerializedName("jobTitle")
     private String mJobTitle;
 
+    @ColumnInfo(name = "company")
     @SerializedName("company")
     private String mCompany;
 
+    @ColumnInfo(name = "about")
     @SerializedName("about")
     private String mAbout;
 
+    @ColumnInfo(name = "photo")
     @SerializedName("photo")
     private String photoUrl;
 
+    @ColumnInfo(name = "flagImage")
     @SerializedName("flagImage")
     private String mFlagImage;
-
-    @SerializedName("links")
-    private Links mLinks;
-
-    public Speaker(String mSpeakerId, String mFirstName, String mLastName, String mLocation, String mJobTitle, String mCompany, String mAbout, String photoUrl, String mFlagImage, Links mLinks) {
-        this.mSpeakerId = mSpeakerId;
-        this.mFirstName = mFirstName;
-        this.mLastName = mLastName;
-        this.mLocation = mLocation;
-        this.mJobTitle = mJobTitle;
-        this.mCompany = mCompany;
-        this.mAbout = mAbout;
-        this.photoUrl = photoUrl;
-        this.mFlagImage = mFlagImage;
-        this.mLinks = mLinks;
-    }
 
 
     public String getSpeakerId() {
@@ -122,11 +124,5 @@ public class Speaker implements Serializable {
         this.mFlagImage = mFlagImage;
     }
 
-    public Links getLinks() {
-        return mLinks;
-    }
 
-    public void setLinks(Links mLinks) {
-        this.mLinks = mLinks;
-    }
 }

@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">academyTask1</string>
+    <string name="app_name">DevFest</string>
     <string name="android">Android</string>
     <string name="more">Еще</string>
-    <string name="events">События</string>
+    <string name="talks">События</string>
     <string name="speakers">Спикеры</string>
     <string name="room">Room</string>
 </resources>

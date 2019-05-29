@@ -1,4 +1,4 @@
-package com.example.academytask1.ui.ui.event;
+package com.example.academytask1.ui.ui.talk;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.academytask1.R;
-import com.example.academytask1.ui.entity.Event;
-import com.example.academytask1.ui.presentation.event.EventCallbackPresenter;
-import com.example.academytask1.ui.presentation.event.EventView;
+import com.example.academytask1.ui.entity.Talk;
+import com.example.academytask1.ui.presentation.talk.EventPresenter;
+import com.example.academytask1.ui.presentation.talk.TalkView;
 
-public class EventFragment extends DialogFragment implements EventView {
+public class TalkFragment extends DialogFragment implements TalkView {
 
     public static final String EVENTID = "EVENTID";
 
@@ -24,11 +24,11 @@ public class EventFragment extends DialogFragment implements EventView {
     private TextView mEventSpeaker;
     private TextView mEventDescription;
 
-    private EventCallbackPresenter mPresenter;
+    private EventPresenter mPresenter;
 
-    public static EventFragment newInstance(Bundle args) {
+    public static TalkFragment newInstance(Bundle args) {
 
-        EventFragment fragment = new EventFragment();
+        TalkFragment fragment = new TalkFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -59,33 +59,28 @@ public class EventFragment extends DialogFragment implements EventView {
         mEventSpeaker = view.findViewById(R.id.tv_event_detail_speaker_name);
         mEventDescription = view.findViewById(R.id.tv_event_detail_summary);
 
-        mPresenter = new EventCallbackPresenter(this);
+        mPresenter = new EventPresenter(this);
         mPresenter.onGetEvent(mEventId);
 
     }
 
     @Override
-    public void showEvent(Event event) {
-
-        mEventTitle.setText(event.getTitle());
-        mEventTrack.setText(event.getTrack());
-        mEventSpeaker.setText(event.getSpeaker());
-        mEventDescription.setText(event.getDescription());
-
+    public void showTalk(Talk talk) {
+        mEventTitle.setText(talk.getTitle());
+        mEventTrack.setText(talk.getTrack());
+        mEventSpeaker.setText(talk.getSpeaker());
+        mEventDescription.setText(talk.getDescription());
     }
 
     @Override
     public void showError() {
-
     }
 
     @Override
     public void showProgress() {
-
     }
 
     @Override
     public void hideProgress() {
-
     }
 }

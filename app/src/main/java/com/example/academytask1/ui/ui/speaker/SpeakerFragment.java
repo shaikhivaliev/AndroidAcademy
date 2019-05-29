@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.example.academytask1.R;
 import com.example.academytask1.ui.entity.Speaker;
-import com.example.academytask1.ui.presentation.speaker.SpeakerCallbackPresenter;
+import com.example.academytask1.ui.presentation.speaker.SpeakerPresenter;
 import com.example.academytask1.ui.presentation.speaker.SpeakerView;
 import com.squareup.picasso.Picasso;
 
@@ -32,7 +32,7 @@ public class SpeakerFragment extends DialogFragment implements SpeakerView {
     private ImageView mTwitterLink;
     private ImageView mGithubLink;
 
-    private SpeakerCallbackPresenter mPresenter;
+    private SpeakerPresenter mPresenter;
 
     public static SpeakerFragment newInstance(Bundle args) {
 
@@ -70,7 +70,7 @@ public class SpeakerFragment extends DialogFragment implements SpeakerView {
         mTwitterLink = view.findViewById(R.id.iv_connect_with_twitter);
         mGithubLink = view.findViewById(R.id.iv_connect_with_github);
 
-        mPresenter = new SpeakerCallbackPresenter(this);
+        mPresenter = new SpeakerPresenter(this);
         mPresenter.onGetSpeaker(mSpeakerId);
     }
 
@@ -85,6 +85,7 @@ public class SpeakerFragment extends DialogFragment implements SpeakerView {
         mJobTitle.setText(speaker.getJobTitle());
         mSpeakerAbout.setText(speaker.getAbout());
 
+/*
         mTwitterLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,6 +101,7 @@ public class SpeakerFragment extends DialogFragment implements SpeakerView {
                 startActivity(intent);
             }
         });
+*/
 
 
     }
