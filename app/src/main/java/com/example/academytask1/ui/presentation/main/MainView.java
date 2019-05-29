@@ -1,6 +1,8 @@
 package com.example.academytask1.ui.presentation.main;
 
-public interface MainView {
+import com.arellomobile.mvp.MvpView;
+
+public interface MainView extends MvpView {
 
     void showError();
 

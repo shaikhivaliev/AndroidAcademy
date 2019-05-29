@@ -6,8 +6,6 @@ import android.arch.persistence.room.Room;
 import com.example.academytask1.ui.model.storage.AppDatabase;
 import com.facebook.stetho.Stetho;
 
-import io.reactivex.plugins.RxJavaPlugins;
-
 
 public class AppDelegate extends Application {
 
@@ -20,20 +18,16 @@ public class AppDelegate extends Application {
         instance = this;
         database = Room.databaseBuilder(this, AppDatabase.class, "database")
                 .build();
-        RxJavaPlugins.setErrorHandler(throwable -> {});
 
         // Create an InitializerBuilder
         Stetho.InitializerBuilder initializerBuilder =
                 Stetho.newInitializerBuilder(this);
-
         // Enable Chrome DevTools
         initializerBuilder.enableWebKitInspector(
                 Stetho.defaultInspectorModulesProvider(this)
         );
-
         // Use the InitializerBuilder to generate an Initializer
         Stetho.Initializer initializer = initializerBuilder.build();
-
         // Initialize Stetho with the Initializer
         Stetho.initialize(initializer);
 

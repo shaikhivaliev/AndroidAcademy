@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.arellomobile.mvp.MvpAppCompatActivity;
+import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.example.academytask1.R;
 import com.example.academytask1.ui.presentation.main.MainPresenter;
 import com.example.academytask1.ui.presentation.main.MainView;
@@ -15,11 +17,13 @@ import com.example.academytask1.ui.ui.talks.TalksFragment;
 import com.example.academytask1.ui.ui.more.MoreFragment;
 import com.example.academytask1.ui.ui.speakers.SpeakersFragment;
 
-public class MainActivity extends AppCompatActivity implements
+public class MainActivity extends MvpAppCompatActivity implements
         MainView {
 
     private BottomNavigationView mBottomMenu;
-    private MainPresenter mPresenter;
+
+    @InjectPresenter
+    public MainPresenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_main);
         initUI();
 
-        mPresenter = new MainPresenter(this);
         mPresenter.getData();
     }
 

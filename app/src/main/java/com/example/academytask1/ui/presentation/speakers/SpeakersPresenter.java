@@ -3,6 +3,8 @@ package com.example.academytask1.ui.presentation.speakers;
 
 import android.annotation.SuppressLint;
 
+import com.arellomobile.mvp.InjectViewState;
+import com.arellomobile.mvp.MvpPresenter;
 import com.example.academytask1.ui.AppDelegate;
 import com.example.academytask1.ui.model.storage.SimpleDao;
 
@@ -10,13 +12,8 @@ import com.example.academytask1.ui.model.storage.SimpleDao;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-public class SpeakersPresenter {
-
-    private SpeakersView mSpeakersView;
-
-    public SpeakersPresenter(SpeakersView speakersView) {
-        this.mSpeakersView = speakersView;
-    }
+@InjectViewState
+public class SpeakersPresenter extends MvpPresenter<SpeakersView> {
 
     @SuppressLint("CheckResult")
     public void onGetLocalData() {
@@ -29,8 +26,8 @@ public class SpeakersPresenter {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
-                        speakers -> mSpeakersView.showSpeakers(speakers),
-                        throwable -> mSpeakersView.showError()
+                        speakers -> getViewState().showSpeakers(speakers),
+                        throwable -> getViewState().showError()
                 );
     }
 }

@@ -1,8 +1,9 @@
 package com.example.academytask1.ui.presentation.main;
 
 import android.annotation.SuppressLint;
-import android.util.Log;
 
+import com.arellomobile.mvp.InjectViewState;
+import com.arellomobile.mvp.MvpPresenter;
 import com.example.academytask1.ui.AppDelegate;
 import com.example.academytask1.ui.entity.Speaker;
 import com.example.academytask1.ui.entity.Talk;
@@ -15,23 +16,19 @@ import io.reactivex.Completable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-public class MainPresenter {
-
-    private MainView mView;
-
-    public MainPresenter(MainView mView) {
-        this.mView = mView;
-    }
-
+@InjectViewState
+public class MainPresenter extends MvpPresenter<MainView> {
 
     @SuppressLint("CheckResult")
     public void getData() {
+
+        //todo как проверять новые данные или нет?
 
         SimpleDao mSimpleDao = AppDelegate.getInstance().getDatabase().getDao();
 
         ApiUtils.getApiService().getResponse()
                 .subscribeOn(Schedulers.io())
-                .doFinally(() -> mView.openSpeakersFragment())
+                .doFinally(() -> getViewState().openSpeakersFragment())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         response -> {
@@ -46,7 +43,8 @@ public class MainPresenter {
                                     .subscribeOn(Schedulers.io())
                                     .subscribe();
 
-                        }, throwable -> mView.showError()
+                        }, throwable -> getViewState().showError()
                 );
     }
-}
+
+   }

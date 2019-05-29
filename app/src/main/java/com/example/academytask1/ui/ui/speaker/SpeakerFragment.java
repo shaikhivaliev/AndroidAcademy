@@ -12,13 +12,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.arellomobile.mvp.MvpAppCompatDialogFragment;
+import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.example.academytask1.R;
 import com.example.academytask1.ui.entity.Speaker;
 import com.example.academytask1.ui.presentation.speaker.SpeakerPresenter;
 import com.example.academytask1.ui.presentation.speaker.SpeakerView;
 import com.squareup.picasso.Picasso;
 
-public class SpeakerFragment extends DialogFragment implements SpeakerView {
+public class SpeakerFragment extends MvpAppCompatDialogFragment implements SpeakerView {
 
     public static final String SPEAKERID = "SPEAKERID";
 
@@ -32,7 +34,8 @@ public class SpeakerFragment extends DialogFragment implements SpeakerView {
     private ImageView mTwitterLink;
     private ImageView mGithubLink;
 
-    private SpeakerPresenter mPresenter;
+    @InjectPresenter
+    public SpeakerPresenter mPresenter;
 
     public static SpeakerFragment newInstance(Bundle args) {
 
@@ -70,7 +73,6 @@ public class SpeakerFragment extends DialogFragment implements SpeakerView {
         mTwitterLink = view.findViewById(R.id.iv_connect_with_twitter);
         mGithubLink = view.findViewById(R.id.iv_connect_with_github);
 
-        mPresenter = new SpeakerPresenter(this);
         mPresenter.onGetSpeaker(mSpeakerId);
     }
 

@@ -9,12 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.arellomobile.mvp.MvpAppCompatDialogFragment;
+import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.example.academytask1.R;
 import com.example.academytask1.ui.entity.Talk;
-import com.example.academytask1.ui.presentation.talk.EventPresenter;
+import com.example.academytask1.ui.presentation.talk.TalkPresenter;
 import com.example.academytask1.ui.presentation.talk.TalkView;
 
-public class TalkFragment extends DialogFragment implements TalkView {
+public class TalkFragment extends MvpAppCompatDialogFragment implements TalkView {
 
     public static final String EVENTID = "EVENTID";
 
@@ -24,7 +26,8 @@ public class TalkFragment extends DialogFragment implements TalkView {
     private TextView mEventSpeaker;
     private TextView mEventDescription;
 
-    private EventPresenter mPresenter;
+    @InjectPresenter
+    public TalkPresenter mPresenter;
 
     public static TalkFragment newInstance(Bundle args) {
 
@@ -59,7 +62,6 @@ public class TalkFragment extends DialogFragment implements TalkView {
         mEventSpeaker = view.findViewById(R.id.tv_event_detail_speaker_name);
         mEventDescription = view.findViewById(R.id.tv_event_detail_summary);
 
-        mPresenter = new EventPresenter(this);
         mPresenter.onGetEvent(mEventId);
 
     }

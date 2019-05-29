@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.arellomobile.mvp.MvpAppCompatFragment;
+import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.example.academytask1.R;
 import com.example.academytask1.ui.OnItemClickListener;
 import com.example.academytask1.ui.entity.Talk;
@@ -22,14 +24,16 @@ import com.example.academytask1.ui.ui.talk.TalkFragment;
 
 import java.util.List;
 
-public class TalksFragment extends Fragment implements
+public class TalksFragment extends MvpAppCompatFragment implements
         OnItemClickListener,
         TalksView {
 
     private RecyclerView mRecyclerView;
     private TalksAdapter mAdapter;
     private ProgressBar mProgressBar;
-    private TalksPresenter mPresenter;
+
+    @InjectPresenter
+    public TalksPresenter mPresenter;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -57,7 +61,6 @@ public class TalksFragment extends Fragment implements
         mAdapter.setListener(this);
         mRecyclerView.setAdapter(mAdapter);
 
-        mPresenter = new TalksPresenter(this);
         mPresenter.onGetTalks();
     }
 

@@ -3,19 +3,16 @@ package com.example.academytask1.ui.presentation.talk;
 
 import android.annotation.SuppressLint;
 
+import com.arellomobile.mvp.InjectViewState;
+import com.arellomobile.mvp.MvpPresenter;
 import com.example.academytask1.ui.AppDelegate;
 import com.example.academytask1.ui.model.storage.SimpleDao;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-public class EventPresenter {
-
-    private TalkView mTalkView;
-
-    public EventPresenter(TalkView mTalkView) {
-        this.mTalkView = mTalkView;
-    }
+@InjectViewState
+public class TalkPresenter extends MvpPresenter<TalkView> {
 
     @SuppressLint("CheckResult")
     public void onGetEvent(String talkId) {
@@ -26,8 +23,8 @@ public class EventPresenter {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
-                        talk -> mTalkView.showTalk(talk),
-                        throwable -> mTalkView.showError()
+                        talk -> getViewState().showTalk(talk),
+                        throwable -> getViewState().showError()
                 );
 
 

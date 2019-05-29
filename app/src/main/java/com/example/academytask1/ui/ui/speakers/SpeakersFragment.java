@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.arellomobile.mvp.MvpAppCompatFragment;
+import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.example.academytask1.R;
 import com.example.academytask1.ui.OnItemClickListener;
 import com.example.academytask1.ui.entity.Speaker;
@@ -22,7 +24,7 @@ import com.example.academytask1.ui.ui.speaker.SpeakerFragment;
 
 import java.util.List;
 
-public class SpeakersFragment extends Fragment implements
+public class SpeakersFragment extends MvpAppCompatFragment implements
         OnItemClickListener,
         SpeakersView {
 
@@ -30,7 +32,8 @@ public class SpeakersFragment extends Fragment implements
     private SpeakersAdapter mAdapter;
     private ProgressBar mProgressBar;
 
-    private SpeakersPresenter mPresenter;
+    @InjectPresenter
+    public SpeakersPresenter mPresenter;
 
     @Nullable
     @Override
@@ -53,7 +56,6 @@ public class SpeakersFragment extends Fragment implements
         mAdapter.setListener(this);
         mRecyclerView.setAdapter(mAdapter);
 
-        mPresenter = new SpeakersPresenter(this);
         mPresenter.onGetLocalData();
     }
 
