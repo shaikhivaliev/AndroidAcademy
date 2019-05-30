@@ -29,9 +29,13 @@ public class MainActivity extends MvpAppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initUI();
 
-        mPresenter.getData();
+        if (savedInstanceState == null) {
+            changeFragment(new SpeakersFragment());
+            mPresenter.getData();
+        }
+
+        initUI();
     }
 
 
@@ -78,8 +82,4 @@ public class MainActivity extends MvpAppCompatActivity implements
         Toast.makeText(this, "Ошибка", Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    public void openSpeakersFragment() {
-        changeFragment(new SpeakersFragment());
-    }
 }

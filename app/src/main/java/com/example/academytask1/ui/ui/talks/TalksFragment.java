@@ -3,7 +3,7 @@ package com.example.academytask1.ui.ui.talks;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -43,7 +43,7 @@ public class TalksFragment extends MvpAppCompatFragment implements
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_event_list, container, false);
+        return inflater.inflate(R.layout.fragment_talk_list, container, false);
     }
 
     @Override
@@ -75,7 +75,8 @@ public class TalksFragment extends MvpAppCompatFragment implements
 
         FragmentManager fm = getActivity().getSupportFragmentManager();
         TalkFragment eventDetail = TalkFragment.newInstance(args);
-        eventDetail.show(fm, "fragment_event_detail");
+        eventDetail.setStyle(DialogFragment.STYLE_NO_TITLE, 0);
+        eventDetail.show(fm, "fragment_talk_detail");
     }
 
     @Override

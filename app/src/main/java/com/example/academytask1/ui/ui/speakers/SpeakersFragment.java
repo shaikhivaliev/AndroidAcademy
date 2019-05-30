@@ -3,6 +3,7 @@ package com.example.academytask1.ui.ui.speakers;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -93,6 +94,7 @@ public class SpeakersFragment extends MvpAppCompatFragment implements
 
         FragmentManager fm = getActivity().getSupportFragmentManager();
         SpeakerFragment speakerDetail = SpeakerFragment.newInstance(args);
+        speakerDetail.setStyle(DialogFragment.STYLE_NO_TITLE, 0);
         speakerDetail.show(fm, "fragment_speaker_detail");
 
 

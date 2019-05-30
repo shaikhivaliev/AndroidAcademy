@@ -3,10 +3,10 @@ package com.example.academytask1.ui.ui.talk;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.TextView;
 
 import com.arellomobile.mvp.MvpAppCompatDialogFragment;
@@ -50,7 +50,7 @@ public class TalkFragment extends MvpAppCompatDialogFragment implements TalkView
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_event_detail, container, false);
+        return inflater.inflate(R.layout.fragment_talk_detail, container, false);
     }
 
     @Override

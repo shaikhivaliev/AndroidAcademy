@@ -19,17 +19,9 @@ public class AppDelegate extends Application {
         database = Room.databaseBuilder(this, AppDatabase.class, "database")
                 .build();
 
-        // Create an InitializerBuilder
-        Stetho.InitializerBuilder initializerBuilder =
-                Stetho.newInitializerBuilder(this);
-        // Enable Chrome DevTools
-        initializerBuilder.enableWebKitInspector(
-                Stetho.defaultInspectorModulesProvider(this)
-        );
-        // Use the InitializerBuilder to generate an Initializer
-        Stetho.Initializer initializer = initializerBuilder.build();
-        // Initialize Stetho with the Initializer
-        Stetho.initialize(initializer);
+        Stetho.initialize(Stetho.newInitializerBuilder(this)
+                .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
+                .build());
 
     }
 

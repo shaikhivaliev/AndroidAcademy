@@ -1,14 +1,12 @@
 package com.example.academytask1.ui.ui.speaker;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,7 +18,8 @@ import com.example.academytask1.ui.presentation.speaker.SpeakerPresenter;
 import com.example.academytask1.ui.presentation.speaker.SpeakerView;
 import com.squareup.picasso.Picasso;
 
-public class SpeakerFragment extends MvpAppCompatDialogFragment implements SpeakerView {
+public class SpeakerFragment extends MvpAppCompatDialogFragment implements
+        SpeakerView {
 
     public static final String SPEAKERID = "SPEAKERID";
 
@@ -74,6 +73,7 @@ public class SpeakerFragment extends MvpAppCompatDialogFragment implements Speak
         mGithubLink = view.findViewById(R.id.iv_connect_with_github);
 
         mPresenter.onGetSpeaker(mSpeakerId);
+
     }
 
     @Override

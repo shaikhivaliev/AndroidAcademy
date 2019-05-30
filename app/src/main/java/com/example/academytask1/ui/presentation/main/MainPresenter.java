@@ -28,7 +28,6 @@ public class MainPresenter extends MvpPresenter<MainView> {
 
         ApiUtils.getApiService().getResponse()
                 .subscribeOn(Schedulers.io())
-                .doFinally(() -> getViewState().openSpeakersFragment())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         response -> {
