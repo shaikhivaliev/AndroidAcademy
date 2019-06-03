@@ -1,7 +1,6 @@
 package com.example.academytask1.ui;
 
 import android.support.v4.app.Fragment;
-import android.util.Log;
 
 import com.example.academytask1.ui.ui.devfest.DevFestFragment;
 import com.example.academytask1.ui.ui.more.MoreFragment;

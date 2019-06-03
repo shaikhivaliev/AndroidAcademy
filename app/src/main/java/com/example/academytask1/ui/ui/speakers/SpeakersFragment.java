@@ -17,11 +17,13 @@ import android.widget.Toast;
 
 import com.arellomobile.mvp.MvpAppCompatFragment;
 import com.arellomobile.mvp.presenter.InjectPresenter;
+import com.arellomobile.mvp.presenter.ProvidePresenter;
 import com.example.academytask1.R;
 import com.example.academytask1.ui.AppDelegate;
 import com.example.academytask1.ui.OnItemClickListener;
 import com.example.academytask1.ui.Screens;
 import com.example.academytask1.ui.entity.Speaker;
+import com.example.academytask1.ui.model.Repository;
 import com.example.academytask1.ui.presentation.speakers.SpeakersPresenter;
 import com.example.academytask1.ui.presentation.speakers.SpeakersView;
 import com.example.academytask1.ui.ui.speaker.SpeakerFragment;
@@ -62,7 +64,6 @@ public class SpeakersFragment extends MvpAppCompatFragment implements
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mAdapter.setListener(this);
         mRecyclerView.setAdapter(mAdapter);
-
         mPresenter.onGetLocalData();
     }
 
